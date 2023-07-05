@@ -1,10 +1,12 @@
-extends layout.pug 
-block content 
-    .container
-  
-      each item in article 
-        h1= item.title
-        p= item.content
+extends layout.pug
+
+block content
+  .container
+    each item in article
+      h1= item.title
+      p= item.content
+      button.btn.btn-primary(type="button" data-id=item._id) Delete
+
         
       //- div#article-data(data-article=JSON.stringify(article))
 

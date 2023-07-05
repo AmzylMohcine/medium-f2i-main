@@ -1,4 +1,4 @@
-const { create, comments, applaud, showArticle, showAll } = require("../controllers/articleController")
+const { create, comments, applaud, showArticle, showAll, deleteArticle, updateArticle } = require("../controllers/articleController")
 const Article = require("../models/articleModel")
 
 const router = require("express").Router()
@@ -6,6 +6,8 @@ const router = require("express").Router()
 router.get("/create", (req, res) => {
   res.render("create")
 })
+router.get("/:id/delete", deleteArticle)
+router.put("/:id/update", updateArticle)
 router.get("/:id/show", showArticle)
 router.get("/list", showAll)
 router.post("/create", create)
