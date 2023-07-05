@@ -1,0 +1,16 @@
+extends layout.pug 
+block content 
+    .container
+  
+      each item in article 
+        h1= item.title
+        p= item.content
+        
+      //- div#article-data(data-article=JSON.stringify(article))
+
+      //- p Applaudissements :#{article.applauseCount}
+
+    //-   butonn.btn.btn-primary(id='applaudButton') Applaudir
+
+
+    //- script(src="/js/applause.js")
